@@ -14,6 +14,7 @@ export class SelectedModel {
 
 export class AppComponent {
   title = 't-game';
+  viewToggle: boolean = false;
 
   randomNumber = Math.floor(Math.random() * 10) + 1;
   gameData: any = {

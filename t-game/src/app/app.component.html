@@ -1,4 +1,4 @@
-<section>
+<section *ngIf="viewToggle">
   <h1>Match it!</h1>
   <br>
   <p *ngIf="!!shuffledGameData.length">Countries</p>
@@ -21,4 +21,10 @@
   <div>
     <h2 *ngIf="!shuffledGameData.length">Congratulations</h2>
   </div>
+</section>
+
+<section>
+  <br>
+  <button (click)="viewToggle=!viewToggle">{{viewToggle?'Hide':'Show'}} Old Solution</button>
+  <app-solution-v2></app-solution-v2>
 </section>
